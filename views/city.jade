@@ -1,0 +1,14 @@
+doctype html
+html
+  head
+    include partials/head.jade
+  body
+    include partials/navbar.jade
+    .container
+      include partials/heading.jade
+      .row
+        -for(i=1;i<=noOfImages;i++)
+          .col-sm-6.col-md-6.col-lg-6
+            .thumbnail
+              img(src='/images/'+cityName+'/'+cityName+'-'+i+'.jpg', alt=cityName+'-'+i)
+      include partials/scripts.jade
